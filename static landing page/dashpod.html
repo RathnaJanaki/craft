@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Dasboard</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <style>
+    body{
+      background-color: white;
+    }
+    .header {
+      padding: 20px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      font-size: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3px;
+      background-color: #1abc9c;
+      color: black;
+    }
+
+    .tab-content {
+      padding-top: 20px;
+      word-spacing: 10px;
+      padding: 20px;
+    }
+
+    .tab-content:hover {
+      transform: scale(1.03);
+      background-color: paleturquoise;
+    }
+    #home-tab:hover {
+      color: purple;
+      text-decoration: underline;
+      transform: scale(1.03);
+      background-color: paleturquoise;
+    }
+
+    #profile-tab:hover {
+      color: purple;
+      text-decoration: underline;
+      transform: scale(1.03);
+      background-color: paleturquoise;
+    }
+    #contact-tab:hover {
+      color: purple;
+      text-decoration: underline;
+      transform: scale(1.03);
+      background-color: paleturquoise;
+    }
+
+    #myTab {
+      padding-top: 10px;
+    }
+
+    .table {
+      background-color: #dffff9;
+    }
+    #group:hover{
+      transform:scale(1.03);
+      background-color: lightsteelblue;
+    }
+    * {
+      font-family: serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Task Dasboard</h1>
+    <p>Track status of each Task</p>
+  </div>
+  <div class="container col-lg-12">
+    <div class="row">
+      <div class="col col-lg-6">
+        <canvas id="myChart1"></canvas>
+      </div>
+      <div class="col col-lg-6">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+              role="tab" aria-controls="home" aria-selected="true">Home</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+              role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+              role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <p>
+              Primitive Subsistence Farming: It is a ‘slash and burn’ agriculture. It is done with the help of primitive
+              tools like hoe, dao and digging sticks, and family/community labour. The farming depends upon monsoon,
+              natural fertility of the soil and suitability of other environmental conditions to the crops grown.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <p>
+              India is an agriculturally important country as two-thirds of its population is engaged in agricultural
+              activities.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <p>
+              Organic farming is also in fashion these days because it is practised without factory made chemicals such
+              as fertilisers and pesticides. Hence, it does not affect environment in a negative manner.
+
+              • Indian farmers should diversify their cropping pattern from cereals to high-value crops which will
+              increase incomes and reduce environmental degradation simultaneously.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-lg-6 shadow-sm p-3 mb-5 bg-body rounded">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">S.N</th>
+              <th scope="col">devolopers name</th>
+              <th scope="col">inprograss</th>
+              <th scope="col">completed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Joseph</td>
+              <td>18</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Rathna</td>
+              <td>20</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Bency</td>
+              <td>14</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col col-lg-6" >
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start" id="group">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold text-danger">blocker</div>
+              Number of tasks in blocker
+            </div>
+            <span class="badge bg-primary rounded-pill">17</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start" id="group">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold text-warning">inprograss</div>
+              Number of tasks in progress
+            </div>
+            <span class="badge bg-primary rounded-pill">18</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start" id="group">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold text-success">completed</div>
+              Number of tasks in completed
+            </div>
+            <span class="badge bg-primary rounded-pill">20</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+  <footer>
+    <p style="font-size: 20px;">Author: Hege Refsnes<br>
+      <a href="mailto:hege@example.com" style="color:brown;">hege@example.com</a>
+    </p>
+  </footer>
+</body>
+<script>
+  let ctx1 = document.getElementById("myChart1").getContext("2d");
+  let myChart = new Chart(ctx1, {
+    type: "line",
+    data: {
+      labels: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      datasets: [
+        {
+          label: "work load",
+          data: [2, 9, 3, 17, 6, 3, 7],
+          backgroundColor: "rgba(153,205,1,0.6)",
+        },
+        {
+          label: "free hours",
+          data: [2, 2, 5, 5, 2, 1, 10],
+          backgroundColor: "rgba(155,153,10,0.6)",
+        },
+        {
+          label: "task",
+          data: [1, 2, 3, 4, 5, 18, 7],
+          backgroundColor: "red",
+        },
+        {
+          label: "status",
+          data: [11, 13, 15, 17, 19, 1, 10],
+          backgroundColor: "green",
+        },
+      ],
+    },
+  });
+  let ctx2 = document.getElementById("myChart2").getContext("2d");
+  let myChart2 = new Chart(ctx2, {
+    type: "bar",
+    data: {
+      labels: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      datasets: [
+        {
+          label: "work load",
+          data: [2, 9, 3, 17, 6, 3, 7],
+          backgroundColor: "rgba(153,205,1,0.6)",
+        },
+        {
+          label: "free hours",
+          data: [2, 2, 5, 5, 2, 1, 10],
+          backgroundColor: "rgba(155,153,10,0.6)",
+        },
+        {
+          label: "task",
+          data: [1, 2, 3, 4, 5, 18, 7],
+          backgroundColor: "red",
+        },
+        {
+          label: "status",
+          data: [11, 13, 15, 17, 19, 1, 10],
+          backgroundColor: "green",
+        },
+      ],
+    },
+  });
+</script>
+
+</html>
